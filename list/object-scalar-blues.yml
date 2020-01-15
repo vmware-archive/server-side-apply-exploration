@@ -1,0 +1,8 @@
+apiVersion: "colours.example.com/v1"
+kind:       ColourList
+metadata:
+  name:     blue-colour-set
+spec:
+  colours:
+  - turquoise
+  - navy

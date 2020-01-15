@@ -1,0 +1,10 @@
+apiVersion: "colours.example.com/v1"
+kind:       ColourMap
+metadata:
+  name:     green-map
+spec:
+  colour:
+    name:   turquoise
+    hue:    light
+    saturation: transparent
+    shimmer: shiny

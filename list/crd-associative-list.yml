@@ -1,0 +1,41 @@
+apiVersion: apiextensions.k8s.io/v1
+kind: CustomResourceDefinition
+metadata:
+  name: dictionaries.colours.example.com
+spec:
+  group: colours.example.com
+  versions:
+    - name: v1
+      served: true
+      storage: true
+      schema:
+        openAPIV3Schema:
+          type: object #must be object at the root
+          properties:
+            spec:
+              type: object
+              properties:
+                colours:
+                  type: array
+                  x-kubernetes-list-type: map
+                  x-kubernetes-list-map-keys:
+                  - name
+                  items:
+                    type: object
+                    properties:
+                      name:
+                        type: string
+                      hue:
+                        type: string
+                        default: verydeep
+                    #   shimmer:
+                    #     type: string
+                replicas:
+                  type: integer
+  scope: Namespaced
+  names:
+    plural: colourdictionaries
+    singular: colourdictionary
+    kind: ColourDictionary
+    shortNames:
+    - cd

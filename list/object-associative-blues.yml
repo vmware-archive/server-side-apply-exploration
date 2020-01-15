@@ -1,0 +1,13 @@
+apiVersion: "colours.example.com/v1"
+kind:       ColourDictionary
+metadata:
+  name:     blue-colour-dictionary
+spec:
+  colours:
+  #edit this between CRD changes, to exercise compatibility
+  - name:   turquoise
+    hue:    light
+    # shimmer: intense
+  - name:   navy
+    hue:    deep
+    # shimmer: muted
