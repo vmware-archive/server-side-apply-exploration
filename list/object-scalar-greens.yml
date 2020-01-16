@@ -4,5 +4,7 @@ metadata:
   name:     colour-list
 spec:
   colours:
-  - turquoise
-  - navy
+  - sage
+  - lime
+  - emerald
+  - olive
